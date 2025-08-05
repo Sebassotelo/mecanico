@@ -19,16 +19,16 @@ export const Chat = () => {
       showWelcomeScreen: false,
       defaultLanguage: "en",
       initialMessages: [
-        "Hola! 👋",
-        "Soy el asistente de Sebas Sotelo, ¿en qué te puedo ayudar?",
+        "Hi there! 👋",
+        "I’m the Further Assistant. I’m going to ask you a few questions to get started.",
       ],
       i18n: {
         en: {
-          title: "Asistente Virtual",
-          subtitle: "Pregúntame lo que necesites sobre Sebas.",
+          title: "Virtual Assistant",
+          subtitle: "I'll ask you a few questions to begin.",
           footer: "",
-          getStarted: "Nueva Conversación",
-          inputPlaceholder: "Escribe tu pregunta...",
+          getStarted: "Start New Conversation",
+          inputPlaceholder: "Type your message...",
         },
       },
       enableStreaming: false,
