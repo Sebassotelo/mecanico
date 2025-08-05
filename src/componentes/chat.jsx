@@ -72,7 +72,7 @@ export const Chat = () => {
           --chat--message--bot--border: none;
         }
 
-        /* --- **NUEVO** - Estructura del Input y Botón de Enviar --- */
+        /* --- Estructura del Input y Botón de Enviar --- */
         .n8n-chat-input-container {
           display: flex;
           align-items: center;
@@ -83,6 +83,7 @@ export const Chat = () => {
           flex-grow: 1; /* El campo de texto ocupa el espacio disponible */
         }
 
+        /* --- **MODIFICACIÓN** - Botón de Enviar Siempre Visible y Prominente --- */
         #n8n-chat-send-button {
           display: flex !important;
           align-items: center;
@@ -92,17 +93,17 @@ export const Chat = () => {
           border-radius: 50%; /* Botón circular */
           background-color: var(--chat--color-primary);
           color: var(--chat--color-white);
-          flex-shrink: 0; /* Evita que el botón se encoja */
-          transition: opacity 0.2s, background-color 0.2s;
-
-          /* El botón siempre es visible, pero cambia su opacidad */
-          opacity: 1;
+          flex-shrink: 0;
+          opacity: 1 !important; /* Se asegura que siempre sea 100% opaco */
+          cursor: pointer !important; /* El cursor siempre es una mano */
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Sombra para darle profundidad */
+          border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil para contraste */
         }
 
-        /* Cuando el botón NO está deshabilitado (hay texto), se vuelve opaco y usable */
-        #n8n-chat-send-button:not([disabled]) {
-          opacity: 1;
-          cursor: pointer;
+        /* **NUEVO** - Asegura que el ícono (SVG) dentro del botón siempre sea visible */
+        #n8n-chat-send-button svg {
+          display: block !important;
+          opacity: 1 !important;
         }
 
         /* --- Ajustes de Posicionamiento --- */
@@ -123,7 +124,7 @@ export const Chat = () => {
           border-bottom-right-radius: 4px !important;
         }
 
-        /* --- **CORRECCIÓN MEJORADA PARA MÓVILES** --- */
+        /* --- CORRECCIÓN MEJORADA PARA MÓVILES --- */
         @media (max-width: 600px) {
           #n8n-chat-window {
             display: flex !important;
@@ -152,7 +153,7 @@ export const Chat = () => {
 
           .n8n-chat-input-container {
             flex-shrink: 0;
-            padding: 8px !important; /* Un poco menos de padding en móvil */
+            padding: 8px !important;
           }
 
           #n8n-chat-launcher {
