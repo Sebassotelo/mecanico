@@ -20,12 +20,12 @@ export const Chat = () => {
       defaultLanguage: "en",
       initialMessages: [
         "Hola! 👋",
-        "Soy el asistente de Sebas Sotelo, ¿en qué te puedo ayudar?",
+        "Soy el asistente de Further, Te voy a hacer unas Preguntas",
       ],
       i18n: {
         en: {
           title: "Asistente Virtual",
-          subtitle: "Pregúntame lo que necesites sobre Sebas.",
+          subtitle: "Te voy a hacer unas preguntas.",
           footer: "",
           getStarted: "Nueva Conversación",
           inputPlaceholder: "Escribe tu pregunta...",
